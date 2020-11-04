@@ -1,0 +1,19 @@
+{
+  "name": "dmall",
+  "version": "0.0.1",
+  "description": "Working massdm bot in discord.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "discord.js": "^12.3.1",
+    "chalk": "^4.1.0"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "license": "ISC",
+  "author": "chrome#5555"
+}
