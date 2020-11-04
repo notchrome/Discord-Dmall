@@ -1,0 +1,2 @@
+# dmall
+MassDm Discord Bot
