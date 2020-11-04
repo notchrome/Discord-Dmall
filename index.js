@@ -5,7 +5,7 @@ const config = require("./config.json")
 let prefix = config.prefix;
 let ownerOnly = config.ownerOnly
 
-client.login(process.env.TOKEN)
+client.login(config.token)
 
 
 client.on('ready', () => {
