@@ -27,7 +27,7 @@ client.on('message', async message => {
         
         await guild.members.fetch();
         var memberCount = guild.members.cache.filter(member => !member.user.bot).size;
-        console.log(chalk.yellow.bold.underline("DMING ALL " + `${memberCount}` + " USERS OF " + `${guild.name}`))
+        console.log(chalk.yellow.bold.underline(`DMING ALL ${memberCount} USERS OF ${guild.name}`))
         await Promise.all(guild.members.cache.map(async (member) => {
 
 
