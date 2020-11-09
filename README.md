@@ -1,2 +1,2 @@
 # dmall
-Working Discord Mass Dm bot
+Working js Discord Mass Dm bot
