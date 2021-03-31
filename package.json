@@ -1,19 +1,19 @@
 {
-  "name": "dmall",
-  "version": "0.0.1",
-  "description": "Working massdm bot in discord.js",
-  "main": "index.js",
+  "name": "MassDm",
+  "version": "1.0.3",
+  "description": "",
+  "main": "mass.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node mass.js"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "discord.js": "^12.3.1",
-    "chalk": "^4.1.0"
+    "axios": "^0.21.1",
+    "chalk": "^4.1.0",
+    "discord.js": "^11.5.1",
+    "inquirer": "^7.3.3",
+    "node-fetch": "^2.6.1",
+    "retry-axios": "^2.4.0"
   },
-  "engines": {
-    "node": "12.x"
-  },
-  "license": "ISC",
-  "author": "chrome#5555"
+  "author": "@chrome#5555",
+  "license": "ISC"
 }
