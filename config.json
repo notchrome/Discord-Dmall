@@ -1,7 +1,5 @@
 {
-  "token": "BOT-TOKEN",
-  "prefix": "!",
-  "ownerID": "YOUR-ID",
-  "ownerOnly": false
+"token": "BOT_TOKEN",
+"guildid": "GUILD_ID",
+"dmMessage": "YOUR MESSAGE"
 }
-  
