@@ -1,2 +1,3 @@
-# dmall
-Working js Discord Mass Dm bot
+# Discord Massdm 
+Advanced Discord Mass Dm Bot (Nov 2020)
+
