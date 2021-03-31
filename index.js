@@ -1,2 +1,434 @@
+const axios = require("axios")
+const rax = require('retry-axios')
+const Discord = require("discord.js")
+const chalk = require("chalk")
+var inquirer = require('inquirer');
 
-const skid_0x5351=['\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20━\x20USERNAME\x20|\x20','JUST\x20DM\x20[\x20','size','join','startsWith','split','\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20+:+\x20\x20\x20\x20+:+\x20+:+\x20+:+:+\x20+:+\x20\x20+:+\x20\x20\x20+:+\x20\x20+:+\x20\x20\x20\x20\x20\x20\x20\x20+:+\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20+:+\x20\x20\x20\x20+:+\x20+:+\x20\x20\x20\x20+:+\x20\x20\x20\x20+:+\x20\x20','all','fetch','map','prefix','greenBright','\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20+#+\x20\x20\x20\x20+:+\x20+#+\x20\x20+:+\x20\x20+#+\x20+#++:++#++:\x20+#+\x20\x20\x20\x20\x20\x20\x20\x20+#+\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20+#++:++#+\x20\x20+#+\x20\x20\x20\x20+:+\x20\x20\x20\x20+#+\x20\x20','tag','message','content','bold','chalk','\x20IN\x20THIS\x20SERVER\x20','bot','filter','user','cache','\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#+#\x20\x20\x20\x20#+#\x20#+#\x20\x20\x20\x20\x20\x20\x20#+#\x20#+#\x20\x20\x20\x20\x20#+#\x20#+#\x20\x20\x20\x20\x20\x20\x20\x20#+#\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#+#\x20\x20\x20\x20#+#\x20#+#\x20\x20\x20\x20#+#\x20\x20\x20\x20#+#\x20\x20\x20','\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20+#+\x20\x20\x20\x20+#+\x20+#+\x20\x20\x20\x20\x20\x20\x20+#+\x20+#+\x20\x20\x20\x20\x20+#+\x20+#+\x20\x20\x20\x20\x20\x20\x20\x20+#+\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20+#+\x20\x20\x20\x20+#+\x20+#+\x20\x20\x20\x20+#+\x20\x20\x20\x20+#+\x20\x20\x20','━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━','members','ready','then','author','underline','catch','redBright','yellow','token','DAMING\x20ALL\x20MEMBERS\x20','\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20:::::::::\x20\x20::::\x20\x20\x20\x20::::\x20\x20\x20\x20\x20\x20:::\x20\x20\x20\x20\x20:::\x20\x20\x20\x20\x20\x20\x20\x20:::\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20:::::::::\x20\x20\x20::::::::\x20:::::::::::\x20','\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20━\x20ID\x20\x20\x20\x20\x20\x20\x20|\x20','slice','send','ownerOnly','\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#########\x20\x20###\x20\x20\x20\x20\x20\x20\x20###\x20###\x20\x20\x20\x20\x20###\x20##########\x20##########\x20\x20\x20\x20\x20\x20#########\x20\x20\x20########\x20\x20\x20\x20\x20###\x20','name','dmall','delete','ERROR\x20|\x20COULDNT\x20DM\x20[\x20','log'];(function(_0x9f2fbc,_0x5351b5){const _0x3176d8=function(_0x1ed25d){while(--_0x1ed25d){_0x9f2fbc['push'](_0x9f2fbc['shift']());}};_0x3176d8(++_0x5351b5);}(skid_0x5351,0xfb));const skid_0x3176=function(_0x9f2fbc,_0x5351b5){_0x9f2fbc=_0x9f2fbc-0x0;let _0x3176d8=skid_0x5351[_0x9f2fbc];return _0x3176d8;};const _0x499793=skid_0x3176,skid_0x1ed25d=require('discord.js'),skid_0x5eb957=require(_0x499793('0x1')),skid_0x43351a=new skid_0x1ed25d['Client'](),skid_0x437128=require('./config.json');let skid_0x5092b7=skid_0x437128[_0x499793('0x29')],skid_0x14c838=skid_0x437128[_0x499793('0x18')];skid_0x43351a['login'](skid_0x437128[_0x499793('0x12')]),skid_0x43351a['on'](_0x499793('0xb'),()=>{const _0x296de3=_0x499793;console['log'](skid_0x5eb957['greenBright'](_0x296de3('0x14'))),console[_0x296de3('0x1e')](skid_0x5eb957['greenBright']('\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20:+:\x20\x20\x20\x20:+:\x20+:+:+:\x20:+:+:+\x20\x20\x20:+:\x20:+:\x20\x20\x20:+:\x20\x20\x20\x20\x20\x20\x20\x20:+:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20:+:\x20\x20\x20\x20:+:\x20:+:\x20\x20\x20\x20:+:\x20\x20\x20\x20:+:\x20')),console[_0x296de3('0x1e')](skid_0x5eb957['greenBright'](_0x296de3('0x25'))),console[_0x296de3('0x1e')](skid_0x5eb957[_0x296de3('0x2a')](_0x296de3('0x2b'))),console[_0x296de3('0x1e')](skid_0x5eb957[_0x296de3('0x2a')](_0x296de3('0x8'))),console[_0x296de3('0x1e')](skid_0x5eb957[_0x296de3('0x2a')](_0x296de3('0x7'))),console[_0x296de3('0x1e')](skid_0x5eb957[_0x296de3('0x2a')](_0x296de3('0x19'))),console[_0x296de3('0x1e')](skid_0x5eb957[_0x296de3('0x10')]('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')),console[_0x296de3('0x1e')](skid_0x5eb957[_0x296de3('0x2a')]('\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20━\x20PREFIX\x20\x20\x20|\x20'+skid_0x5092b7+_0x296de3('0x1b'))),console['log'](skid_0x5eb957['greenBright'](_0x296de3('0x15')+skid_0x43351a[_0x296de3('0x5')]['id'])),console['log'](skid_0x5eb957['greenBright'](_0x296de3('0x1f')+skid_0x43351a[_0x296de3('0x5')][_0x296de3('0x2c')])),console[_0x296de3('0x1e')](skid_0x5eb957[_0x296de3('0x2a')]('\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20━\x20MADE\x20BY\x20\x20|\x20chrome#5555')),console[_0x296de3('0x1e')](skid_0x5eb957['redBright'](_0x296de3('0x9')));}),skid_0x43351a['on'](_0x499793('0x2d'),async _0x394cd3=>{const _0x209805=_0x499793,_0x3f232e=_0x394cd3['guild'],_0x19cc77=_0x394cd3[_0x209805('0x2e')][_0x209805('0x16')](skid_0x5092b7['length'])['trim']()[_0x209805('0x24')]('\x20')[_0x209805('0x16')](0x1)[_0x209805('0x22')]('\x20');if(_0x394cd3[_0x209805('0x2e')][_0x209805('0x23')](skid_0x5092b7+_0x209805('0x1b'))){if(skid_0x14c838===!![]&&_0x394cd3[_0x209805('0xd')]['id']!==skid_0x437128['ownerID'])return;else _0x394cd3[_0x209805('0x1c')]();await _0x3f232e[_0x209805('0xa')][_0x209805('0x27')]();var _0xba2249=_0x3f232e['members'][_0x209805('0x6')][_0x209805('0x4')](_0x430b29=>!_0x430b29[_0x209805('0x5')][_0x209805('0x3')])[_0x209805('0x21')];console[_0x209805('0x1e')](skid_0x5eb957[_0x209805('0x11')][_0x209805('0x0')][_0x209805('0xe')](_0x209805('0x13')+_0xba2249+_0x209805('0x2')+_0x3f232e[_0x209805('0x1a')])),await Promise[_0x209805('0x26')](_0x3f232e[_0x209805('0xa')][_0x209805('0x6')][_0x209805('0x28')](async _0x42d116=>{const _0x212511=_0x209805;!_0x42d116[_0x212511('0x5')][_0x212511('0x3')]&&_0x42d116[_0x212511('0x17')](_0x19cc77+'\x0a\x20'+_0x42d116)[_0x212511('0xc')](_0x208ab=>{const _0x24f1df=_0x212511;console[_0x24f1df('0x1e')](skid_0x5eb957['greenBright'](_0x24f1df('0x20')+_0x42d116['user'][_0x24f1df('0x2c')]+'\x20]'));})[_0x212511('0xf')](_0x1d130e=>{const _0x27f934=_0x212511;console[_0x27f934('0x1e')](skid_0x5eb957[_0x27f934('0x10')](_0x27f934('0x1d')+_0x42d116[_0x27f934('0x5')][_0x27f934('0x2c')]+'\x20]'));});}));}});
+const config = require("./config.json")
+
+
+const interceptorId = rax.attach();
+
+let token = config.token;
+//let guildid = "744473542220972123"
+
+let guild = config.guildid;
+
+var guildid = [];
+ var userids = [];       
+ var channels = [];
+ 
+        let message = config.dmMessage;
+        
+        
+        
+        async function getguilds() {
+	
+await axios(`https://discord.com/api/v8/users/@me/guilds`, {
+            method: 'GET',
+            headers: {
+                "Authorization": 'Bot ' + token,
+                "Content-Type": "application/json",
+            },
+            })
+            .then(resp => {
+console.log(resp.data)
+resp.data.map(g => { 
+console.log(chalk.yellowBright(g.name))
+guildid.push(g.id)
+})
+})
+
+}
+        
+        async function scrapeu(guildid) {
+	
+	userids = [];
+	
+    await new Promise((resolve, reject) => {
+    
+    const client = new Discord.Client();
+    client.login(token)
+    
+    client.on('ready', async () => {
+    	console.log("hi")
+        const guild = client.guilds.get(guildid)
+        await guild.fetchMembers();
+        await Promise.all(guild.members.map(async (member) => {
+        	if(member.user.bot == false) {
+            userids.push(member.id);
+            //console.log(member.id)
+            }
+        })).then(resolve())
+        
+        await client.destroy(token)
+        
+    })
+  
+})
+}
+
+
+
+
+async function scrapeuuall(guild) {
+	
+	userids = [];
+	
+    await new Promise((resolve, reject) => {
+    
+    const client = new Discord.Client();
+    client.login(token)
+    
+    client.on('ready', async () => {
+    //	console.log("hi")
+        const guildd = client.guilds.get(guild)
+        await guildd.fetchMembers();
+        await Promise.all(guildd.members.map(async (member) => {
+        	if(member.user.bot == false) {
+            userids.push(member.id);
+         //   console.log(member.id)
+            }
+        })).then(resolve())
+        
+        await client.destroy(token)
+        
+    })
+  
+})
+}
+
+
+
+async function scrapeuuonline(guild) {
+	
+	userids = [];
+	
+    await new Promise((resolve, reject) => {
+    
+    const client = new Discord.Client();
+    client.login(token)
+    
+    client.on('ready', async () => {
+    	console.log("hi")
+        const guildd = client.guilds.get(guild)
+        await guildd.fetchMembers();
+        await Promise.all(guildd.members.map(async (member) => {
+        if(member.presence.status !== "offline" && member.user.bot == false) {
+            userids.push(member.id);
+         //   console.log(member.id)
+            }
+        })).then(resolve())
+        
+        await client.destroy(token)
+        
+    })
+  
+})
+}
+
+
+
+
+async function scrapeonline(guildid) {
+	
+	userids = [];
+	
+    await new Promise((resolve, reject) => {
+    
+    const client = new Discord.Client();
+    client.login(token)
+    
+    client.on('ready', async () => {
+    	console.log("hi")
+        const guild = client.guilds.get(guildid)
+        await guild.fetchMembers();
+        await Promise.all(guild.members.map(async (member) => {
+        	if(member.presence.status !== "offline" && member.user.bot == false) {
+            userids.push(member.id);
+          //  console.log(member)
+            }
+        })).then(resolve())
+        
+        await client.destroy(token)
+        
+    })
+  
+})
+}
+
+
+
+        
+        
+        async function openchannel() {
+        var number = (userids.length*50)/190;
+       var approximate = parseInt(number * 100)/100
+        
+        console.log(chalk.yellowBright("ESTIMATED SPEED : " + approximate + "seconds"))
+        	
+        channels = [];
+        	
+        var y = 0;
+        
+        var h = 0;
+        
+        var j = 0;
+        	
+        return new Promise((resolve, reject) => {
+        	
+        if (userids.length == 0) {
+            resolve()
+        } else {
+	
+   for (var i = 0; i < userids.length; i++) {
+    	
+  //  for (var i = 0; i < 1000; i++) {
+    	
+    setTimeout( function (i) {
+    	
+    const interceptorId = rax.attach();
+    
+            
+        	
+        axios(`https://discord.com/api/v8/users/@me/channels`, {
+            method: 'POST',
+            headers: {
+                "Authorization": 'Bot ' + token,
+                "Content-Type": "application/json",
+            },
+            data: {"recipients":[userids[i]]},
+            raxConfig: {
+                    retry: 5,
+                    onRetryAttempt: err => {
+                        const cfg = rax.getConfig(err);
+                        console.log(`Retry attempt #${cfg.currentRetryAttempt}`);
+                    }}
+        }).then(resp => {
+        	y++
+ //console.log(resp.data.id)
+ channels.push(resp.data.id)
+ h++
+ console.log(chalk.greenBright("OPENED CHANNEL [#" + h + "]"))
+ //console.log(resp)
+ 
+ })
+ .then(prom => {
+                   if (y >= userids.length) {
+                 //	if (y >= 1000) {
+                        resolve(y)
+                    }
+                    
+                })
+                .catch((e) => {
+                	j++
+                    //console.log(e.data)
+                  console.log(chalk.redBright("Invalid Channel #" + j))
+                  //console.log(e)
+                    y++              
+                   if (y >= userids.length) {
+            //  	if (y >= 1000) {
+                        resolve(y)
+                    }      
+                    })
+ }, 25 * i, i);
+        
+        }
+        }
+        })
+        
+        }
+        
+        
+        
+        async function dm() {
+        	
+        var n = 0;
+        
+        var g = 0;
+        
+        var d = 0;
+        	
+        return new Promise((resolve, reject) => {
+        	if (channels.length == 0) {
+            resolve()
+        } else {
+	
+    for (var v = 0; v < channels.length; v++) {
+    	
+    setTimeout( function (v) {
+    	
+    const interceptorId = rax.attach();
+    
+    
+        	
+        
+        	
+        axios(`https://discord.com/api/v8/channels/${channels[v]}/messages`, {
+            method: 'POST',
+            headers: {
+                "Authorization": 'Bot ' + token,
+                "Content-type": "application/json",
+            },
+            data: {
+            	"content": message,
+            },
+            raxConfig: {
+                    retry: 5,
+                    onRetryAttempt: err => {
+                        const cfg = rax.getConfig(err);
+                        console.log(`Retry attempt #${cfg.currentRetryAttempt}`);
+                    }}
+        }).then(resp => {
+        //	console.log(n)
+        	n++
+        g++
+        console.log(chalk.greenBright("DM" + " [#" + g + "] " + "SENT"))
+ //console.log(resp.id)
+ //console.log(resp.status)
+ })
+ .then(prom => {
+                    if (n >= channels.length) {
+                        resolve(n)
+                    }
+                    
+                })
+                .catch((e) => {
+                  //  console.log(e.data)
+                  d++ 
+                  console.log("ERROR | FAILED DM" + ' [ #' + d + ' [ ')
+               //   console.log(e)
+                  
+                //  console.log(e)
+                    n++              
+                   if (n >= channels.length) {
+                        resolve(n)
+                    }      
+                    })
+ }, 25 * v, v);
+        
+        }
+        }
+        })
+        
+        
+        	
+        }
+        
+        
+        
+        async function dmone(guild) {
+        	
+        	console.log(chalk.yellowBright("FETCHING MEMBERS"))
+        	await scrapeuuall(guild)
+        
+        console.log(chalk.yellowBright("OPENING DMS"))
+        await openchannel() 
+        console.log(chalk.yellowBright("DMING MEMBERS : " + message))
+        await dm() 
+        }
+        
+        async function dmoneonline(guild) {
+        	console.log(chalk.yellowBright("FETCHING MEMBERS"))
+        	await scrapeuuonline(guild)
+        console.log(chalk.yellowBright("OPENING DMS"))
+        await openchannel() 
+        console.log(chalk.yellowBright("DMING ONLINE MEMBERS : " + message))
+        await dm()
+        }
+        	
+        
+        
+        async function massdm(guildid) {
+        	console.log(chalk.yellowBright("FETCHING MEMBERS"))
+       await scrapeu(guildid) 
+       console.log(chalk.yellowBright("OPENING DMS"))
+        await openchannel() 
+        console.log(chalk.yellowBright("DMING MEMBERS : " + message))
+        await dm()
+        }
+        
+        
+        async function massdmonline(guildid) {
+        	console.log(chalk.yellowBright("FETCHING MEMBERS"))
+       await scrapeonline(guildid) 
+       console.log(chalk.yellowBright("OPENING DMS"))
+        await openchannel() 
+        console.log(chalk.yellowBright("DMING ONLINE MEMBERS : " + message))
+        await dm()
+        }
+        
+  //    massdm()
+  
+  async function dmall(guildid) {
+  	await getguilds()
+  
+  for (var x = 0; x<guildid.length; x++) {
+  	
+     await massdm(guildid[x])
+     
+     }
+  	
+  }
+      
+      
+      async function dmonline(guildid) {
+  	await getguilds()
+  
+  for (var x = 0; x<guildid.length; x++) {
+  	
+     await massdmonline(guildid[x])
+     
+     }
+  	
+  }
+      
+      
+      
+  
+  
+  
+  
+  
+	
+	console.log(`
+	
+ ██████╗██╗  ██╗██████╗  ██████╗ ███╗   ███╗███████╗
+██╔════╝██║  ██║██╔══██╗██╔═══██╗████╗ ████║██╔════╝
+██║     ███████║██████╔╝██║   ██║██╔████╔██║█████╗  
+██║     ██╔══██║██╔══██╗██║   ██║██║╚██╔╝██║██╔══╝  
+╚██████╗██║  ██║██║  ██║╚██████╔╝██║ ╚═╝ ██║███████╗
+ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝
+                                                    
+`)
+	
+	
+	inquirer
+  .prompt({
+    type: 'list',
+    name: 'option',
+    message: "Who Would You Like To Dm?",
+    choices: [new inquirer.Separator(), "All Members", "Online Members"
+],
+  })
+  .then(async function(answers) {
+ //   console.log(JSON.stringify(answers, null, '  '));
+  if(answers.option == 'All Members') {
+    	await dmone(guild)
+    }
+    else if(answers.option == 'Online Members') {
+    	await dmoneonline(guild)
+    }
+   else if(answers.option == 'All Bots Guilds & All Members') {
+    	await dmall(guildid)
+    }
+    else if(answers.option == 'All Bots Guilds & Only Online Members') {
+   await dmonline(guildid) 
+    }
+    
+   
+
+    
+  });
+	
+	
