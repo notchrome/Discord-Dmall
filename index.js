@@ -85,7 +85,7 @@ async function fetch(after) {
 
 }
 
-async function scrapeu() {
+async function scrapeuuall() {
 
 	let chan = await fetch();
 
@@ -113,7 +113,7 @@ async function scrapeu() {
 
 
 
-async function scrapeuuall(guild) {
+async function notfixing(guild) {
 
 
 
